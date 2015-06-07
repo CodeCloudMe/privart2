@@ -3,16 +3,13 @@ class Space < ActiveRecord::Base
   :booking_rate_weekly, :booking_rate_monthly, :residence_type, :bedroom_count,
   :bathroom_count, :room_type, :bed_type, :accommodates, :amenities, :description,
   :house_rules, :address, :city, :country, :latitude,
-  :longitude, :amenities_indicies, :booking_rate_indicies, :photo_url, :placeavatar1
+  :longitude, :amenities_indicies, :booking_rate_indicies, :photo_url
 
   geocoded_by :address
 
   validates_presence_of :owner_id, :title, :residence_type,
   :bedroom_count, :bathroom_count, :room_type, :bed_type, :accommodates,
   :amenities, :description, :house_rules, :address, :city, :country
-
-
-  mount_uploader :placeavatar1, PlacephotoUploader
 
   after_validation :geocode, if: :address_changed?
 
@@ -30,61 +27,53 @@ class Space < ActiveRecord::Base
   primary_key: :user_id
 
   def self.booking_rates
-    ["Hourly"]
+    ["Daily"]
   end
 
   def self.residence_types
-    ["Residence",
-     "Event Space",
-     "Hotel Event Space",
-     "Restaurant",
-     "Bar",
-     "Gallery",
-     "Banquet Hall",
-     "Penthouse",
-     "Loft",
-     "Storefront",
-     "Other"]
+    ["Apartment",
+     "House",
+     "Bed & Breakfast"]
   end
 
   def self.room_types
-    ["-100 sq.",
-    "+100 sq."]
- end
+    ["Entire home/apt",
+     "Private room",
+     "Shared room"]
+  end
 
   def self.bed_types
     ["Real Bed"]
   end
 
   def self.numerical_options
-    ["10","20","50","75","100","150","200","250","300","350","400","450","500","1000","2000","3000","4000","10000"]
+    ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16+"]
   end
-
-  def self.numerical_options_rooms
-    ["1","2","3","4","5","6","7","8","9","10","15","20","30","50","100","200+"]
-  end
-
-  # def self.numerical_options_bathrooms
-  #   ["1","2","3","4","5","6","7","8","9","10","15","20","30","50","100","200+"]
-  # end
 
   def self.amenities_list
-    ["Indoor",
-     "Outdoor",
-     "Rooftop",
-     "In-house Catering",
-     "Outside Catering",
+    ["Smoking Allowed",
+     "Pets Allowed",
+     "TV",
+     "Cable TV",
+     "Internet",
+     "Wireless Internet",
      "Air Conditioning",
      "Heating",
      "Elevator in Building",
      "Handicap Accessible",
-     "Full Bar",
-     "Parking",
-     "Furniture",
-     "Security",
-     "A/V equipment",
-     "Kosher Available"]
-  
+     "Pool",
+     "Kitchen",
+     "Free parking on premise",
+     "Doorman",
+     "Gym",
+     "Hot Tub",
+     "Indoor Fireplace",
+     "Buzzer/Wireless Intercom",
+     "Breakfast",
+     "Family/Kid Friendly",
+     "Suitable for Events",
+     "Washer",
+     "Dryer"]
   end
 
   def self.integer_from_options_list(options_list)
