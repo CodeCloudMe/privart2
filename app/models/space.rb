@@ -47,7 +47,7 @@ class Space < ActiveRecord::Base
   end
 
   def self.numerical_options
-    ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16+"]
+    ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16"]
   end
 
   def self.amenities_list
