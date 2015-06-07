@@ -9,7 +9,7 @@ class Space < ActiveRecord::Base
 
   validates_presence_of :owner_id, :title, :residence_type,
   :bedroom_count, :bathroom_count, :room_type, :bed_type, :accommodates,
-  :amenities, :description, :house_rules, :address, :city, :country
+  :amenities, :address, :city, :country
 
   mount_uploader :placeavatar1, PlacephotoUploader
   
@@ -211,19 +211,19 @@ class Space < ActiveRecord::Base
   def photo
     # self.photo_url || "http://placekitten.com/g/117/77"
     photo = self.space_photos.sample
-    photo ? photo.url : "http://placekitten.com/g/117/77"
+    photo ? photo.url : "http://www.locksandtrinkets.com/wp-content/uploads/2014/12/nha-gia-re2.jpg"
   end
 
   def photo_small
     # self.photo_url || "http://placekitten.com/g/117/77"
     photo = self.space_photos.sample
-    photo ? photo.url_small : "http://placekitten.com/g/117/77"
+    photo ? photo.url_small : "http://www.musiccityapartments.com/Corporate_apartment_downtown_austin_Living_room.jpg"
   end
 
   def photo_medium
     # self.photo_url || "http://placekitten.com/g/117/77"
     photo = self.space_photos.sample
-    photo ? photo.url_medium : "http://placekitten.com/g/117/77"
+    photo ? photo.url_medium : "http://www.musiccityapartments.com/Corporate_apartment_downtown_austin_Living_room.jpg"
   end
 
 end
