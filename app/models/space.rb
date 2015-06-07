@@ -11,6 +11,8 @@ class Space < ActiveRecord::Base
   :bedroom_count, :bathroom_count, :room_type, :bed_type, :accommodates,
   :amenities, :description, :house_rules, :address, :city, :country
 
+  mount_uploader :placeavatar1, PlacephotoUploader
+  
   after_validation :geocode, if: :address_changed?
 
   has_many :space_photos
