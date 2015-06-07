@@ -1,0 +1,118 @@
+Searching 348 files for "find a venue"
+
+/Users/nimblethreethousand/Desktop/gsta/cloudia/app/views/root/root.html.erb:
+    1  <div class="group" id="root-page-search-bar-container">
+    2:     <h1>Find a venue</h1>
+    3      <h3>Rent from over thousands<br> of users worldwide</h3>
+    4    <form action="<%= spaces_url %>" class="group" id="root-page-search-bar">
+
+1 match in 1 file
+
+
+Searching 347 files for "gathsy"
+
+/Users/nimblethreethousand/Desktop/gsta/cloudia/app/mailers/emailer.rb:
+    1  class Emailer < ActionMailer::Base
+    2:   default :from => "notifications@http://gathsy.com"
+    3   
+    4    def welcome_email(user)
+    5      @user = user
+    6:     @url  = "http://gathsy.com"
+    7:     @from = 'info@gathsy.com'
+    8:     mail(:to => user.email, :subject => "Welcome to Gathsy", :from => @from)
+    9    end
+   10  
+   11     def new_space_email(user)
+   12      @user = user
+   13:     @url  = "http://gathsy.com"
+   14:     @from = 'info@gathsy.com'
+   15:     mail(:to => user.email, :subject => "<div style='font-size:20px'>You've created a new space on Gathsy</div>", :from => @from)
+   16    end
+   17  
+   18    def book_email(user)
+   19      @user = user
+   20:     @url  = "http://gathsy.com"
+   21:     @from = 'info@gathsy.com'
+   22      mail(:to => user.email, :subject => "New Booking Created", :from => @from)
+   23    end
+   ..
+   25    def approve_email(user)
+   26      @user = user
+   27:     @url  = "http://gathsy.com"
+   28:     @from = 'info@gathsy.com'
+   29      mail(:to => user.email, :subject => "Booking Approved", :from => @from)
+   30    end
+   ..
+   32    def decline_email(user)
+   33      @user = user
+   34:     @url  = "http://gathsy.com"
+   35:     @from = 'info@gathsy.com'
+   36      mail(:to => user.email, :subject => "Booking Declined", :from => @from)
+   37    end
+
+/Users/nimblethreethousand/Desktop/gsta/cloudia/app/views/header/_logo_search_bar.html.erb:
+    3  
+    4      <li id="logo-item">
+    5:       <%= link_to image_tag("/gathsy-logo_sm.png", :alt => "Gathsy"), root_url, method: :get, id: "site-logo" %>
+    6      </li>
+    7  
+
+/Users/nimblethreethousand/Desktop/gsta/cloudia/app/views/layouts/application.html.erb:
+    5  
+    6    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    7:   <title>privaRt: Private Residences, Hotels and Resorts</title>
+    8    <%= stylesheet_link_tag    "application", :media => "all" %>
+    9    <%= javascript_include_tag "application" %>
+
+/Users/nimblethreethousand/Desktop/gsta/cloudia/app/views/spaces/show.html.erb:
+  163  
+  164        payInfo = { business: 'skyclubcoders@gmail.com',
+  165:             notifyURL: 'http://gathsy.com/complete',
+  166              virtual: false,             //set to true where you are selling virtual items such as downloads
+  167              quantityupdate: true,       //set to false if you want to disable quantity updates in the cart 
+
+/Users/nimblethreethousand/Desktop/gsta/cloudia/app/views/spaces/show/_booking_sidebar.html.erb:
+  161        function startPayPal(){
+  162          $("#myCart").PayPalCart({ business: 'm@codecloud.me',
+  163:             notifyURL: 'http://gathsymike.herokuapp.com/complete',
+  164              virtual: false,             //set to true where you are selling virtual items such as downloads
+  165              quantityupdate: true,       //set to false if you want to disable quantity updates in the cart 
+
+/Users/nimblethreethousand/Desktop/gsta/cloudia/config/initializers/carrierwave.rb:
+   30    config.fog_directory    = ENV['S3_BUCKET_NAME']
+   31    #config.s3_access_policy = :public_read                          # Generate http:// urls. Defaults to :authenticated_read (https://)
+   32:   #config.fog_host         = "http://gathsy.s3-eu-west-1.amazonaws.com/"
+   33    end
+   34  end
+
+/Users/nimblethreethousand/Desktop/gsta/cloudia/public/complete/index.html:
+    6  <meta name="description" content="">
+    7  <meta name="author" content="">
+    8: <title>Gathsy | Gatherings made easy</title>
+    9  <link href="/complete/css/icomoon.css" rel="stylesheet">
+   10  <link href="/complete/css/bootstrap.css" rel="stylesheet">
+   ..
+   46                        data-speed="600"
+   47                        data-start="1500"
+   48:                       data-easing="easeOutExpo">Gathsy is connecting with the host</div>
+   49              <div class="tp-caption small_text sfl"
+   50                        data-x="center"
+   ..
+   96    <div class="site-btm">
+   97      <div class="container">
+   98:       <p>2014 © <strong>GATHSY</strong>. All rights reserved.</p>
+   99      </div>
+  100    </div>
+
+/Users/nimblethreethousand/Desktop/gsta/cloudia/README.md:
+    1: PrivaRt Beta
+    2  ========
+    3  
+    .
+    5  SUMMARY:
+    6  --------
+    7: PrivaRt is a fork of Gathsy and CloudBnB (https://github.com/jonathan-potter/cloudbnb). Backed by Rails, it replicates many of the core user-facing features of Airbnb (but for event spaces). 
+    8  
+    9  More README coming soon.
+
+24 matches across 8 files

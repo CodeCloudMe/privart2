@@ -1,10 +1,10 @@
-Gathsy Beta
+PrivaRt Beta
 ========
 
 
 SUMMARY:
 --------
-Gathsy is a fork of CloudBnB (https://github.com/jonathan-potter/cloudbnb). Backed by Rails, it replicates many of the core user-facing features of Airbnb (but for event spaces). 
+PrivaRt is a fork of Gathsy and CloudBnB (https://github.com/jonathan-potter/cloudbnb). Backed by Rails, it replicates many of the core user-facing features of Airbnb (but for event spaces). 
 
 More README coming soon.
 
