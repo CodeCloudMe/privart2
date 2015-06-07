@@ -14,11 +14,6 @@ class SpacesController < ApplicationController
 
     if request.xhr?
       render partial: "spaces/index/space_list", locals: {spaces: @spaces}
-
-      respond_to do |format|
-        format.html # index.html.erb
-        format.json  { render :json => @spaces.to_json.html_safe }
-      end
     else
       render :index
     end
@@ -44,8 +39,6 @@ class SpacesController < ApplicationController
 
 
     if @space.save
-       # Tell the UserMailer to send an email when new booking was created
-      Emailer.new_space_email(current_user).deliver
       #space_photo = SpacePhoto.unattached_photo
       #space_photo.update_attributes(space_id: @space.id)
       redirect_to @space
