@@ -26,7 +26,7 @@ gem 'jquery-rails'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'geocoder'
 gem 'calendar_helper'
-gem 'flickr_fu', '~> 0.3.2'
+#gem 'flickr_fu', '~> 0.3.2'
 gem 'figaro'
 
 #fixing error.
