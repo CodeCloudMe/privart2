@@ -2,9 +2,10 @@ PrivaRt Beta
 ========
 
 
+
 SUMMARY:
 --------
-PrivaRt is a fork of Gathsy and CloudBnB (https://github.com/jonathan-potter/cloudbnb). Backed by Rails, it replicates many of the core user-facing features of Airbnb (but for event spaces). 
+PrivaRt is a fork of Gathsy and CloudBnB (https://github.com/jonathan-potter/cloudbnb). Backed by Rails, it replicates many of the core user-facing features of Airbnb (but for private spaces). 
 
 More README coming soon.
 
